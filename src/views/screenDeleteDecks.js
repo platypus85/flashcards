@@ -3,9 +3,10 @@ import { View, Text, StyleSheet, TextInput, TouchableOpacity, Keyboard } from 'r
 import { connect } from 'react-redux';
 import Popup from 'react-native-popup';
 import * as ScreenStyles from '../themes/default/screens';
-import SubmitButton from '../components/buttons/submitButton';
+import DangerButton from '../components/buttons/dangerButton';
 import { default as UUID } from 'uuid';
-import { addDeck } from '../components/deck/deckActions';
+import { deleteAllDecks } from '../components/deck/deckActions';
+import { deleteAllCards } from '../components/card/cardActions';
 
 const styles = StyleSheet.create({
   screen: {
@@ -21,16 +22,18 @@ const styles = StyleSheet.create({
     fontSize: 20
   },
   newDeck: {
-    padding: 30
+    padding: 15
   },
   newDeckTextInput: {
     fontSize: 15,
     textAlignVertical: 'top'
   },
-  submitButtonWrapper: {
+  deleteButtonWrapper: {
+    paddingTop: 20,
     alignItems: 'center'
   }
 })
+
 
 const initialState = {
   title: ""
@@ -41,43 +44,22 @@ class ViewAddDeck extends Component {
     super(props);
     this.state = initialState;
   }
-  addDeck = () => {
-    const { title } = this.state;
-    if (title === '') {
-      Keyboard.dismiss();
-      this.popup.alert('Please enter a title.');
-      return;
-    }
-    const id = UUID.v4();
-    const timestamp = Date.now();
-    this.props.addDeck({ id, title, timestamp });
+  deleteAllDecks = () => {
+    this.props.deleteAllDecks();
+    this.props.deleteAllCards();
     this.setState(initialState);
-    Keyboard.dismiss();
     this.props.navigation.navigate('Decks');
-    setTimeout(() => {
-      this.props.navigation.navigate(
-        'ViewDeck',
-        { id }
-      );
-    }, 1);
   }
   render() {
     return (
       <View style={styles.screen}>
         <View style={styles.header}>
-          <Text style={styles.headerText}>What's the title of the deck?</Text>
+          <Text style={styles.headerText}>Click to delete ALL decks</Text>
         </View>
-        <View style={styles.newDeck}>
-          <TextInput style={styles.newDeckTextInput}
-            value={this.state.title}
-            placeholder="Title"
-            onChangeText={(title) => this.setState({ title })}
-          ></TextInput>
-        </View>
-        <View style={styles.submitButtonWrapper}>
-          <SubmitButton
-            title="SUBMIT"
-            onPress={this.addDeck}
+        <View style={styles.deleteButtonWrapper}>
+          <DangerButton
+            title="DELETE ALL DECKS"
+            onPress={this.deleteAllDecks}
           />
         </View>
         <Popup ref={popup => this.popup = popup }/>
@@ -94,7 +76,8 @@ function mapStateToProps ({ decks }) {
 
 function mapDispatchToProps (dispatch) {
   return {
-    addDeck: (deck) => dispatch(addDeck(deck))
+    deleteAllDecks: () => dispatch(deleteAllDecks()),
+    deleteAllCards: () => dispatch(deleteAllCards())
   }
 }
 

@@ -16,8 +16,8 @@ const styles = StyleSheet.create({
   dangerButton: {
     padding: 15,
     backgroundColor: dangerBackgroundColor,
-    borderRadius: 15,
-    width: 200,
+    borderRadius: 0,
+    width: 175,
     alignItems: 'center'
   },
   dangerButtonText: {

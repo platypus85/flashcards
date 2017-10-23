@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: cardBackgroundColor,
     alignItems: 'stretch',
-    borderRadius: 15,
+    borderRadius: 0,
   },
   number: {
     flex: 1,

@@ -90,7 +90,7 @@ class ViewQuiz extends Component {
               <Text style={styles.headerLabel}>SCORE:</Text>
               <Text style={styles.headerText}>{ score + ' (' + perc + '%)' }</Text>
               <PrimaryButton
-                title="PLAY AGAIN!"
+                title="PLAY AGAIN"
                 onPress={this.restartQuiz}
               />
             </View>

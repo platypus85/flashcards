@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: deckBackgroundColor,
     alignItems: 'stretch',
-    borderRadius: 15,
+    borderRadius: 0,
   },
   number: {
     flex: 1,

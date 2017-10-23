@@ -8,6 +8,34 @@ import { default as UUID } from 'uuid';
 import { deleteAllDecks } from '../components/deck/deckActions';
 import { deleteAllCards } from '../components/card/cardActions';
 
+
+const styles = StyleSheet.create({
+  screen: {
+    ...ScreenStyles.styles.screen,
+    justifyContent: 'flex-start'
+  },
+  header: {
+    height: 50,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  headerText: {
+    fontSize: 20
+  },
+  newDeck: {
+    padding: 15
+  },
+  newDeckTextInput: {
+    fontSize: 15,
+    textAlignVertical: 'top'
+  },
+  deleteButtonWrapper: {
+    paddingTop: 20,
+    alignItems: 'center'
+  }
+})
+
+
 const initialState = {
   title: ""
 }
@@ -58,28 +86,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(ViewAddDeck)
-
-const styles = StyleSheet.create({
-  screen: {
-    ...ScreenStyles.styles.screen,
-    justifyContent: 'flex-start'
-  },
-  header: {
-    height: 50,
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  headerText: {
-    fontSize: 20
-  },
-  newDeck: {
-    padding: 15
-  },
-  newDeckTextInput: {
-    fontSize: 15
-  },
-  deleteButtonWrapper: {
-    paddingTop: 20,
-    alignItems: 'center'
-  }
-})
