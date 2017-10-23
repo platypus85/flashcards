@@ -4,10 +4,10 @@ import { Provider } from 'react-redux';
 import combinedReducer from './src/store/combinedReducer';
 import { StyleSheet, Text, View, StatusBar, AsyncStorage } from 'react-native';
 import { primaryBackgroundColor, primaryColor, highlightBackgroundColor } from './src/themes/default/colors';
-import MyStatusBar from './src/navigation/myStatusBar';
+import StatusBarWidget from './src/navigation/statusBarWidget';
 import MyStore from './src/store/myStore';
 import MyNotifications from './src/notifications/myNotifications';
-import { MyNavigator } from './src/navigation/myNavigator';
+import { NavigatorWidget } from './src/navigation/navigatorWidget';
 import {persistStore, autoRehydrate} from 'redux-persist'
 
 const logger = store => next => action => {
@@ -34,8 +34,8 @@ export default function App () {
       <View style={styles.container}>
         <MyStore />
         <MyNotifications />
-        <MyStatusBar backgroundColor={primaryBackgroundColor} />
-        <MyNavigator />
+        <StatusBarWidget backgroundColor={primaryBackgroundColor} />
+        <NavigatorWidget />
       </View>
     </Provider>
   )

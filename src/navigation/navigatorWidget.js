@@ -52,7 +52,7 @@ const Tabs = TabNavigator({
   }
 })
 
-export const MyNavigator = StackNavigator({
+export const NavigatorWidget = StackNavigator({
   Home: {
     screen: Tabs
   },
