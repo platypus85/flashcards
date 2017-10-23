@@ -1,33 +1,30 @@
 import { TabNavigator, StackNavigator } from 'react-navigation'
 import { primaryBackgroundColor, primaryColor, highlightBackgroundColor } from '../themes/default/colors';
 import MyDeck from '../components/deck/myDeck';
-import ScreenDecks from '../screens/screenDecks';
-import ScreenAddDeck from '../screens/screenAddDeck';
-import ScreenViewDeck from '../screens/screenViewDeck';
-import ScreenDeleteDecks from '../screens/screenDeleteDecks';
-import ScreenAddCard from '../screens/screenAddCard';
-import ScreenQuiz from '../screens/screenQuiz';
+import ViewDecks from '../views/viewDecks';
+import ViewAddDeck from '../views/viewAddDeck';
+import ViewDeck from '../views/viewDeck';
+import ViewDeleteDecks from '../views/viewDeleteDecks';
+import ViewAddCard from '../views/viewAddCard';
+import ViewQuiz from '../views/viewQuiz';
 
 const Tabs = TabNavigator({
   Decks: {
-    screen: ScreenDecks,
+    screen: ViewDecks,
     navigationOptions: {
       tabBarLabel: 'All Decks'
-      //tabBarIcon: ({ tintColor }) => <Ionicons name='ios-bookmarks' size={30} color={tintColor} />
     }
   },
   AddDeck: {
-    screen: ScreenAddDeck,
+    screen: ViewAddDeck,
     navigationOptions: {
-      tabBarLabel: 'Add New Deck',
-      //tabBarIcon: ({ tintColor }) => <Ionicons name='ios-bookmarks' size={30} color={tintColor} />
+      tabBarLabel: 'New Deck',
     },
   },
   DeleteAllDeck: {
-    screen: ScreenDeleteDecks,
+    screen: ViewDeleteDecks,
     navigationOptions: {
       tabBarLabel: 'Delete Decks',
-      //tabBarIcon: ({ tintColor }) => <Ionicons name='ios-bookmarks' size={30} color={tintColor} />
     },
   }
 }, {
@@ -60,7 +57,7 @@ export const MyNavigator = StackNavigator({
     screen: Tabs
   },
   ViewDeck: {
-    screen: ScreenViewDeck,
+    screen: ViewDeck,
     navigationOptions: {
       title: 'Go back',
       headerTintColor: primaryColor,
@@ -70,7 +67,7 @@ export const MyNavigator = StackNavigator({
     }
   },
   AddCard: {
-    screen: ScreenAddCard,
+    screen: ViewAddCard,
     navigationOptions: {
       title: 'Cancel and go back',
       headerTintColor: primaryColor,
@@ -80,7 +77,7 @@ export const MyNavigator = StackNavigator({
     }
   },
   StartQuiz: {
-    screen: ScreenQuiz,
+    screen: ViewQuiz,
     navigationOptions: {
       title: 'Exit quiz and go back',
       headerTintColor: primaryColor,

@@ -6,7 +6,7 @@ import * as ScreenStyles from '../themes/default/screens';
 import sortBy from 'sort-by';
 import * as CardToDeck from '../utils/cardToDeck.js';
 
-class ScreenDecks extends Component {
+class ViewDecks extends Component {
   render() {
     let { decks, cards } = this.props;
     if (decks && decks.length > 0) {
@@ -56,7 +56,7 @@ function mapStateToProps ({ decks, cards }) {
 
 export default connect(
   mapStateToProps
-)(ScreenDecks)
+)(ViewDecks)
 
 const styles = StyleSheet.create({
   screen: {

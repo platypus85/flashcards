@@ -30,7 +30,7 @@ function shuffle (array) {
   }
 }
 
-class ScreenQuiz extends Component {
+class ViewQuiz extends Component {
   constructor(props) {
     super(props);
     this.state = initialState;
@@ -157,7 +157,7 @@ function mapStateToProps ({ activeDeck }) {
 
 export default connect(
   mapStateToProps
-)(ScreenQuiz)
+)(ViewQuiz)
 
 const styles = StyleSheet.create({
   screen: {

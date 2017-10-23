@@ -13,7 +13,7 @@ const initialState = {
   answer: ""
 }
 
-class ScreenAddCard extends Component {
+class ViewAddCard extends Component {
   constructor(props) {
     super(props);
     this.state = initialState;
@@ -102,7 +102,7 @@ function mapDispatchToProps (dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ScreenAddCard)
+)(ViewAddCard)
 
 const styles = StyleSheet.create({
   screen: {

@@ -9,7 +9,7 @@ import PrimaryButton from '../components/buttons/primaryButton';
 import SubmitButton from '../components/buttons/submitButton';
 import { setActiveDeck } from '../components/deck/activeDeckActions';
 
-class ScreenViewDeck extends Component {
+class ViewDeck extends Component {
   static propTypes = {
     navigation: PropTypes.object.isRequired
   }
@@ -96,7 +96,7 @@ function mapDispatchToProps (dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ScreenViewDeck)
+)(ViewDeck)
 
 const styles = StyleSheet.create({
   screen: {

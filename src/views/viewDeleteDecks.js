@@ -12,7 +12,7 @@ const initialState = {
   title: ""
 }
 
-class ScreenAddDeck extends Component {
+class ViewAddDeck extends Component {
   constructor(props) {
     super(props);
     this.state = initialState;
@@ -57,7 +57,7 @@ function mapDispatchToProps (dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ScreenAddDeck)
+)(ViewAddDeck)
 
 const styles = StyleSheet.create({
   screen: {
