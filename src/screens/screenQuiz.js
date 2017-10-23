@@ -139,7 +139,7 @@ class ScreenQuiz extends Component {
               onPress={this.markCorrect}
             />
           <DangerButton
-              title="Incorrect"
+              title="INCORRECT"
               onPress={this.markIncorrect}
             />
           </View>

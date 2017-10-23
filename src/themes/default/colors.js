@@ -1,4 +1,4 @@
-export const primaryBackgroundColor = '#E88E0C';
+export const primaryBackgroundColor = '#45B343';
 export const primaryColor = '#FFFFFF';
 export const dangerBackgroundColor = '#A9190F';
 export const dangerColor = '#FFFFFF';

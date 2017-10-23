@@ -1,7 +1,7 @@
 export const styles = {
   screen: {
-    flex: 1,
     alignItems: 'stretch',
+    flex: 1,
     justifyContent: 'center'
   }
 }
