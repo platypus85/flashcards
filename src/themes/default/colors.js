@@ -1,0 +1,12 @@
+export const primaryBackgroundColor = '#E88E0C';
+export const primaryColor = '#FFFFFF';
+export const dangerBackgroundColor = '#A9190F';
+export const dangerColor = '#FFFFFF';
+export const highlightBackgroundColor = '#008D10';
+export const highlightColor = '#FFFFFF';
+export const textColor = '#000000';
+export const textDataColor = '#EDD9CA';
+export const deckBackgroundColor = '#1B7193';
+export const deckColor = '#FFFFFF';
+export const cardBackgroundColor = '#693EA9';
+export const cardColor = '#FFFFFF';

@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "sdkVersion": "20.0.0",
+    "orientation": "portrait",
+    "name": "FlashCards",
+    "description": "A React Native app developed as part of the Udacity React Nanodegree program.",
+    "slug": "flashcardsalbertocamillo",
+    "version": "1.0",
+    "icon": "https://d30y9cdsu7xlg0.cloudfront.net/png/20461-200.png",
+    "notification": {
+      "icon": "https://d30y9cdsu7xlg0.cloudfront.net/png/20461-200.png"
+    },
+    "ios": {
+      "bundleIdentifier": "org.albertocamillo.exp"
+    },
+    "android": {
+      "package": "org.albertocamillo.exp"
+    }
+  }
+}
