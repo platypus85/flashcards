@@ -47,22 +47,22 @@ class ViewAddCard extends Component {
     return (
       <View style={styles.screen}>
         <View style={styles.header}>
-          <Text style={styles.headerText}>What is the question?</Text>
+          <Text style={styles.headerText}>Please, add the question.</Text>
         </View>
         <View style={styles.newCard}>
           <TextInput style={styles.newCardTextInput}
             value={this.state.question}
-            placeholder="Enter question here"
+            placeholder="Question"
             onChangeText={(question) => this.setState({ question })}
           ></TextInput>
         </View>
         <View style={styles.header}>
-          <Text style={styles.headerText}>What is the answer?</Text>
+          <Text style={styles.headerText}>Please, add the answer.</Text>
         </View>
         <View style={styles.newCard}>
           <TextInput style={styles.newCardTextInput}
             value={this.state.answer}
-            placeholder="Enter answer here"
+            placeholder="Answer"
             onChangeText={(answer) => this.setState({ answer })}
           ></TextInput>
         </View>
@@ -121,7 +121,8 @@ const styles = StyleSheet.create({
     padding: 15
   },
   newCardTextInput: {
-    fontSize: 15
+    fontSize: 15,
+    textAlignVertical: 'top'    
   },
   submitButtonWrapper: {
     alignItems: 'center'

@@ -1,13 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity } from 'react-native';
-import { dangerColor, dangerBackgroundColor } from '../../themes/default/colors';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {dangerColor, dangerBackgroundColor} from '../../themes/default/colors';
 
-export default function DangerBtn ({ title, onPress }) {
+export default function DangerBtn({title, onPress}) {
   return (
-    <TouchableOpacity
-      style={styles.dangerButton}
-      onPress={onPress}>
-        <Text style={styles.dangerButtonText}>{title}</Text>
+    <TouchableOpacity style={styles.dangerButton} onPress={onPress}>
+      <Text style={styles.dangerButtonText}>{title}</Text>
     </TouchableOpacity>
   )
 }

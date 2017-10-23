@@ -1,5 +1,5 @@
-import { TabNavigator, StackNavigator } from 'react-navigation'
-import { primaryBackgroundColor, primaryColor, highlightBackgroundColor } from '../themes/default/colors';
+import {TabNavigator, StackNavigator} from 'react-navigation'
+import {primaryBackgroundColor, primaryColor, highlightBackgroundColor} from '../themes/default/colors';
 import MyDeck from '../components/deck/myDeck';
 import ViewDecks from '../views/viewDecks';
 import ViewAddDeck from '../views/viewAddDeck';
@@ -18,14 +18,14 @@ const Tabs = TabNavigator({
   AddDeck: {
     screen: ViewAddDeck,
     navigationOptions: {
-      tabBarLabel: 'New Deck',
-    },
+      tabBarLabel: 'New Deck'
+    }
   },
   DeleteAllDeck: {
     screen: ViewDeleteDecks,
     navigationOptions: {
-      tabBarLabel: 'Delete Decks',
-    },
+      tabBarLabel: 'Delete Decks'
+    }
   }
 }, {
   navigationOptions: {
@@ -59,7 +59,7 @@ export const NavigatorWidget = StackNavigator({
   ViewDeck: {
     screen: ViewDeck,
     navigationOptions: {
-      title: 'Go back',
+      title: 'Back',
       headerTintColor: primaryColor,
       headerStyle: {
         backgroundColor: primaryBackgroundColor
@@ -69,7 +69,7 @@ export const NavigatorWidget = StackNavigator({
   AddCard: {
     screen: ViewAddCard,
     navigationOptions: {
-      title: 'Cancel and go back',
+      title: 'Back',
       headerTintColor: primaryColor,
       headerStyle: {
         backgroundColor: primaryBackgroundColor
@@ -79,7 +79,7 @@ export const NavigatorWidget = StackNavigator({
   StartQuiz: {
     screen: ViewQuiz,
     navigationOptions: {
-      title: 'Exit quiz and go back',
+      title: 'Exit quiz and Back',
       headerTintColor: primaryColor,
       headerStyle: {
         backgroundColor: primaryBackgroundColor

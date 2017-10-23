@@ -3,5 +3,7 @@ export function doesCardBelongToDeck(card, deck) {
 }
 
 export function showNumberOfCards(num) {
-  return `${num} card${num === 1?'':'s'}`;
+  return `${num} card${num === 1
+    ? ''
+    : 's'}`;
 }

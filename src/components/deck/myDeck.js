@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React, {Component} from 'react';
+import {View, Text, StyleSheet} from 'react-native';
 import PropTypes from 'prop-types';
-import { deckBackgroundColor, deckColor, highlightBackgroundColor, highlightColor } from '../../themes/default/colors';
+import {deckBackgroundColor, deckColor, highlightBackgroundColor, highlightColor} from '../../themes/default/colors';
 import * as CardToDeck from '../../utils/cardToDeck';
 
 export default class MyDeck extends Component {
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: deckBackgroundColor,
     alignItems: 'stretch',
-    borderRadius: 0,
+    borderRadius: 0
   },
   number: {
     flex: 1,
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   body: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   bodyTitle: {
     color: deckColor,

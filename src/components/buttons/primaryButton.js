@@ -1,13 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity } from 'react-native';
-import { primaryColor, primaryBackgroundColor } from '../../themes/default/colors';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {primaryColor, primaryBackgroundColor} from '../../themes/default/colors';
 
-export default function PrimaryBtn ({ title, onPress }) {
+export default function PrimaryBtn({title, onPress}) {
   return (
-    <TouchableOpacity
-      style={styles.primaryButton}
-      onPress={onPress}>
-        <Text style={styles.primaryButtonText}>{title}</Text>
+    <TouchableOpacity style={styles.primaryButton} onPress={onPress}>
+      <Text style={styles.primaryButtonText}>{title}</Text>
     </TouchableOpacity>
   )
 }

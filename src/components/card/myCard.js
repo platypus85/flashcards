@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React, {Component} from 'react';
+import {View, Text, StyleSheet} from 'react-native';
 import PropTypes from 'prop-types';
-import { cardBackgroundColor, cardColor, highlightBackgroundColor, highlightColor } from '../../themes/default/colors';
+import {cardBackgroundColor, cardColor, highlightBackgroundColor, highlightColor} from '../../themes/default/colors';
 
 export default class MyCard extends Component {
   static propTypes = {
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: cardBackgroundColor,
     alignItems: 'stretch',
-    borderRadius: 0,
+    borderRadius: 0
   },
   number: {
     flex: 1,
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   body: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   bodyText: {
     color: cardColor
